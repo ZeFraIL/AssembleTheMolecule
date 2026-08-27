@@ -1,0 +1,19 @@
+- [x] Create assets/data directory and JSON files
+    - [x] `elements.json`
+    - [x] `substances.json`
+- [x] Create data models
+    - [x] `Element.java`
+    - [x] `Substance.java`
+- [x] Implement Database logic
+    - [x] `HelperDB.java` with JSON parsing and SQLite initialization
+- [x] Implement Core Game logic
+    - [x] `FormulaUtils.java`
+- [x] Create UI screens
+    - [x] `MainActivity` (Menu)
+    - [x] `GameActivity`
+    - [x] `SubstanceListActivity`
+- [ ] Create ResultActivity (Optional/Next)
+- [/] Integration and Final Polish
+    - [x] Manifest updates
+    - [/] Navigation and state management
+    - [/] Progress saving

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#F5F5F5"
+    android:id="@+id/model_root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_back"
+            android:backgroundTint="#607D8B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvModelTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/model_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="48dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSubstanceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        android:textColor="#3F51B5"
+        android:gravity="center"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/tvFormula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formula"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/ivMoleculeModel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"/>
+
+        <WebView
+            android:id="@+id/wvMolecule3D"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rendering_status"
+                android:textSize="14sp"
+                android:textStyle="italic"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnCloseModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_close"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

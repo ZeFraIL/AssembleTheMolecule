@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">AssembleTheMolecule</string>
+
+    <!-- Main Menu -->
+    <string name="main_title">Assemble\nThe\nMolecule</string>
+    <string name="btn_play">Play Game</string>
+    <string name="btn_free_lab">Free Lab</string>
+    <string name="btn_dictionary">Substances</string>
+    <string name="btn_draw">Structure Drawing</string>
+    <string name="btn_achievements">Achievements</string>
+
+    <!-- Game Screen -->
+    <string name="task_prefix">Task: </string>
+    <string name="mode_lab">Mode: Free Laboratory</string>
+    <string name="task_assemble">Assemble the formula</string>
+    <string name="lab_instruction">Assemble any substance</string>
+    <string name="label_index"> Index </string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_check">Check</string>
+    <string name="correct">Correct!</string>
+    <string name="error_assembled">Error! Assembled: %1$s. Expected: %2$s</string>
+    <string name="found_prefix">Found: </string>
+    <string name="not_found">Substance [%1$s] not found</string>
+
+    <!-- Dictionary -->
+    <string name="dictionary_title">Substances Dictionary</string>
+    <string name="btn_show_model">Molecule Model</string>
+
+    <!-- Model Screen -->
+    <string name="model_title">Molecule Model</string>
+    <string name="rendering_status">AI is rendering 3D model...</string>
+    <string name="btn_close">Close</string>
+    <string name="error_loading">Loading error. Try again.</string>
+
+    <!-- Drawing Screen -->
+    <string name="draw_task_label">Draw structural formula for:</string>
+    <string name="btn_back">Back</string>
+</resources>

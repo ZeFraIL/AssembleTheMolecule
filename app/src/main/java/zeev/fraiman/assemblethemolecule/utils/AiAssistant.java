@@ -14,7 +14,7 @@ public class AiAssistant {
     private final GenerativeModelFutures model;
 
     public AiAssistant() {
-        GenerativeModel gm = new GenerativeModel("gemini-3.5-flash", BuildConfig.GEMINI_API_KEY);
+        GenerativeModel gm = new GenerativeModel("gemini-3.6-flash", BuildConfig.GEMINI_API_KEY);
         this.model = GenerativeModelFutures.from(gm);
     }
 
@@ -24,6 +24,11 @@ public class AiAssistant {
     }
 
     public void checkStructure(Bitmap sketch, String substanceName, String formula, AiCallback callback) {
+        if (BuildConfig.GEMINI_API_KEY.isEmpty()) {
+            callback.onError("Gemini API key is missing. Please add GEMINI_API_KEY to local.properties.");
+            return;
+        }
+
         String prompt = "Analyze this hand-drawn chemical structure for " + substanceName + " (" + formula + "). " +
                 "1. Check if symbols and number of atoms are correct. " +
                 "2. Check if chemical bonds (lines) are present and correct based on valence rules. " +

@@ -24,7 +24,7 @@ android {
         if (localPropertiesFile.exists()) {
             properties.load(localPropertiesFile.inputStream())
         }
-        val geminiApiKey = properties.getProperty("GEMINI_API_KEY") ?: ""
+        val geminiApiKey = (properties.getProperty("GEMINI_API_KEY") ?: "").trim().removeSurrounding("\"")
         buildConfigField("String", "GEMINI_API_KEY", "\"$geminiApiKey\"")
     }
 
